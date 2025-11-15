@@ -11,32 +11,61 @@
             margin: 0;
             background: #f5f5f5;
             color: #333;
+            line-height: 1.6;
         }
 
         header {
-            background: #1c1c1c;
+            background: #111;
             color: white;
-            padding: 40px 20px;
+            padding: 60px 20px;
             text-align: center;
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 3em;
         }
 
         header p {
             font-size: 1.2em;
-            opacity: 0.8;
+            opacity: 0.85;
+            max-width: 700px;
+            margin: 10px auto 0 auto;
         }
 
+        /* Resume button */
+        .resume-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: #ffffff;
+            color: #111;
+            border-radius: 6px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .resume-btn:hover {
+            background: #e6e6e6;
+        }
+
+        /* Section titles */
+        h2.section-title {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 2em;
+            color: #222;
+        }
+
+        /* Projects grid */
         .projects {
-            max-width: 1000px;
+            max-width: 1100px;
             padding: 40px 20px;
             margin: auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+            gap: 25px;
         }
 
         .card {
@@ -59,16 +88,50 @@
 
         .card p {
             font-size: 0.95em;
-            line-height: 1.4em;
+        }
+
+        /* Bio section */
+        .bio {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            font-size: 1.1em;
         }
     </style>
 </head>
 
 <body>
+
+    <!-- HEADER / BIO SECTION -->
     <header>
         <h1>Felix Makes Robots</h1>
-        <p>Selected Robotics Projects</p>
+
+        <p>
+            I am a robotics engineer focused on human-robot interaction,
+            multi-robot systems, and autonomous perception. My work spans AR-based
+            interfaces, real-time embedded systems, and distributed robot control.
+            I’m applying to PhD programs to push the boundaries of collaborative
+            autonomy and safe human-machine teaming.
+        </p>
+
+        <a class="resume-btn" href="FelixSanchez_Resume.pdf" download>
+            Download Resume (PDF)
+        </a>
     </header>
+
+    <!-- OPTIONAL: EXPANDED BIO SECTION -->
+    <section class="bio">
+        <p>
+            I’ve worked across diverse robotics domains, from augmented reality
+            interfaces at the Army Research Laboratory to multi-robot coordination
+            algorithms and embedded perception stacks for aerial robots.
+            I enjoy building intelligent systems that help humans operate more safely,
+            efficiently, and intuitively in complex environments.
+        </p>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <h2 class="section-title">Projects</h2>
 
     <section class="projects">
 
@@ -106,5 +169,6 @@
         <!-- Add more cards here -->
 
     </section>
+
 </body>
 </html>
